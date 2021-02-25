@@ -1,4 +1,4 @@
-Site/PWA criado com React + TypeScript, utilizando o CSS Module como modelo de estilização e HASURA GraphQL para os dados.
+Site/PWA criado com React + TypeScript, utilizando o CSS Module como modelo de estilização e Hasura GraphQL para os dados.
 
 Link de exemplo: https://savelinksexample.netlify.app/
 
