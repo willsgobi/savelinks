@@ -30,7 +30,14 @@ const MenuSubmit = () => {
             return 
         }
 
-        addLinks({ variables: { title: myTitle, link: myLink }}, ).then(() => {
+        let newLink = '';
+        if(!myLink.includes('https://')){
+            debugger;
+            newLink = `https://${myLink}`;
+            setLink(newLink);
+        }
+
+        addLinks({ variables: { title: myTitle, link: newLink }}, ).then(() => {
             if(!mutationError){
                 window.location.reload();
             }
