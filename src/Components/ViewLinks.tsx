@@ -54,6 +54,17 @@ const ViewLinks = () => {
         setTooltip('');
     }
     
+
+    // if(data === undefined || data.Saved.length === 0) return <div>
+    //     <p>Nenhum dado encontrado!</p>
+    //     <div onClick={() => setAdd(!add)} className={styles.divAdd}>
+    //               <p>Add</p>
+    //           </div>
+    //           {add &&
+    //             <MenuSubmit />
+    //         }
+    // </div>;
+    // console.log(data);
     return (
         <section className={`${styles.content}`}>
             { showMessage &&
@@ -61,7 +72,7 @@ const ViewLinks = () => {
             }
             {loading ? (
             <FaSpinner className={styles.spinner}/>
-            ) : <div className={styles.helperLinks}>{data && data.Saved.map(e => (
+            ) : <div className={styles.helperLinks}>{data === undefined || data.Saved.length === 0 ? <p>Nenhum link encontrado!</p> : data.Saved.map(e => (
 
                   <div className={styles.savedLinks} key={e.id} >
                         <div className={styles.divTitle} onMouseEnter={() => addTooltip(e.id)} onMouseLeave={() => removeTooltip()}>
@@ -88,7 +99,7 @@ const ViewLinks = () => {
               </div>
               {add &&
                 <MenuSubmit />
-            }
+                }
 
         </section>
     )
