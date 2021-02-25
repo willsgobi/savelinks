@@ -1,0 +1,157 @@
+.content{
+    width: 100%;
+    padding-top: 50px;
+    height: 100%;
+    margin-bottom: 50px;
+}
+
+.divTitle, .divLink, .divActions{
+    width: 33.3%;
+}
+
+.savedLinks{
+    position: relative;
+    display: flex;
+    max-width: 500px;
+    margin: 0 auto;
+    border: 2px solid rgb(207, 207, 207);
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 8px;
+    transition: .5s;
+    margin-top: 30px;
+}
+
+.savedLinks:nth-child(1){
+    margin-top: 50px;
+}
+
+.divLink{
+    max-width: 300px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.divLink p, .divTitle p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    line-break: loose;
+    -webkit-box-orient: vertical;
+}
+
+.savedLinks:hover{
+    border: 2px solid rgb(90, 13, 114);
+    box-shadow: 5px 8px 7px rgba(0, 0, 0, .3);
+}
+
+.copy{
+    cursor: pointer;
+    color: rgb(128, 128, 128);
+}
+
+.copy:hover{
+    color: rgb(90, 13, 114);
+}
+
+.helperLinks{
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.spinner{
+    text-align: center;
+    margin-top: 15%;
+    height: 40px;
+    width: 40px;
+    color: rgb(90, 13, 114);
+    animation: spin infinite 1s linear;
+}
+
+.divAdd{
+    display: flex;
+    position: fixed;
+    justify-content: center;
+    border-radius: 5px;
+    align-items: center;
+    color: white;
+    right: 8%;
+    width: 70px;
+    height: 30px;
+    background-color: rgb(90, 13, 114);
+    top: 50px;
+    cursor: pointer;
+    box-shadow: 2px 3px 7px rgba(0, 0, 0, .3);
+    transition: .4s;
+    border: 1px solid transparent;
+}
+
+.divAdd:hover{
+    background-color: rgb(147, 38, 180);
+    border: 1px solid rgb(90, 13, 114)
+}
+
+.message{
+    position: fixed;
+    background-color: rgb(90, 13, 114);
+    border-radius: 5px;
+    color: white;
+    animation: show .8s forwards;
+    margin: 0 auto;
+    width: 200px;
+    margin-bottom: 20px;
+    padding: 5px;
+    z-index: 1000;
+    top: 10px;
+}
+
+.open{
+    cursor: pointer;
+    color: rgb(6, 23, 100);
+    margin-left: 10px;
+}
+
+.open:hover{
+    color: rgb(25, 28, 211);
+}
+
+.tooltip {
+    position: absolute;
+    top: -50px;
+    height: 40px;
+    width: 100%;
+    background-color: rgba(17, 17, 17, 0.733);
+    border: 2px solid rgb(226, 212, 20);
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    color: white;
+}
+
+.tooltip p {
+    margin-left: 20px;
+}
+
+.hidden {
+    display: none;
+}
+
+
+@keyframes show {
+    0% {
+        right: -10px;
+    }
+    100% {
+        right: 8%;
+    }
+}
+
+@keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
